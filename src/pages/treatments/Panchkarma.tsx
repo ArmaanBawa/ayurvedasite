@@ -1,97 +1,100 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const Panchkarma: React.FC = () => {
   const panchkarmaTherapies = [
     {
       id: 1,
       name: "Vamana (Therapeutic Vomiting)",
-      description: "A cleansing therapy that eliminates excess Kapha dosha through induced vomiting. It's particularly effective for respiratory disorders, skin diseases, and diabetes.",
-      image: "/images/ayurveda/panchkarma/vamana.jpg"
+      description: "A cleansing therapy that eliminates excess Kapha dosha through induced vomiting. It's particularly effective for respiratory disorders, skin diseases, and diabetes."
     },
     {
       id: 2,
       name: "Virechana (Purgation Therapy)",
-      description: "A cleansing therapy that eliminates excess Pitta dosha through induced purgation. It's beneficial for skin disorders, digestive issues, and liver problems.",
-      image: "/images/ayurveda/panchkarma/virechana.jpg"
+      description: "A cleansing therapy that eliminates excess Pitta dosha through induced purgation. It's beneficial for skin disorders, digestive issues, and liver problems."
     },
     {
       id: 3,
       name: "Basti (Medicated Enema)",
-      description: "The most important Panchkarma therapy that eliminates excess Vata dosha. It's highly effective for neurological disorders, arthritis, and chronic constipation.",
-      image: "/images/ayurveda/panchkarma/basti.jpg"
+      description: "The most important Panchkarma therapy that eliminates excess Vata dosha. It's highly effective for neurological disorders, arthritis, and chronic constipation."
     },
     {
       id: 4,
       name: "Nasya (Nasal Administration)",
-      description: "A therapy that administers medicated oils through the nasal passages. It's effective for sinusitis, migraines, and neurological disorders.",
-      image: "/images/ayurveda/panchkarma/nasya.jpg"
+      description: "A therapy that administers medicated oils through the nasal passages. It's effective for sinusitis, migraines, and neurological disorders."
     },
     {
       id: 5,
       name: "Raktamokshana (Blood Letting)",
-      description: "A specialized therapy that purifies the blood. It's beneficial for skin disorders, gout, and certain inflammatory conditions.",
-      image: "/images/ayurveda/panchkarma/raktamokshana.jpg"
+      description: "A specialized therapy that purifies the blood. It's beneficial for skin disorders, gout, and certain inflammatory conditions."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Panchkarma Therapy</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Discover the ancient Ayurvedic purification and rejuvenation therapies
-          </p>
+    <div className="min-h-screen bg-emerald-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 text-white py-20">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Link 
+              to="/treatments"
+              className="inline-flex items-center text-emerald-200 hover:text-white mb-8 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Treatments
+            </Link>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Panchkarma Treatment</h1>
+            <p className="text-lg text-emerald-100 mb-8">
+              Experience the ancient Ayurvedic detoxification and rejuvenation therapies
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-12 space-y-12">
-          {panchkarmaTherapies.map((therapy) => (
-            <div key={therapy.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="md:flex">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-32 w-32 object-cover rounded-lg"
-                    src={therapy.image}
-                    alt={therapy.name}
-                  />
-                </div>
-                <div className="p-6">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                    {therapy.name}
-                  </h2>
-                  <p className="text-gray-600">{therapy.description}</p>
-                </div>
+      {/* Treatment Details */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-md p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Understanding Panchkarma</h2>
+              <p className="text-gray-600 mb-6">
+                Panchkarma is a comprehensive system of Ayurvedic detoxification and rejuvenation therapies. 
+                These five therapeutic procedures help eliminate toxins from the body and restore balance to 
+                the doshas (Vata, Pitta, and Kapha). Each therapy is carefully selected based on your 
+                individual constitution and health needs.
+              </p>
+            </div>
+
+            {/* Therapies */}
+            <div className="bg-white rounded-xl shadow-md p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Panchkarma Therapies</h2>
+              <div className="space-y-8">
+                {panchkarmaTherapies.map((therapy) => (
+                  <div key={therapy.id} className="border-b border-gray-200 pb-6 last:border-0 last:pb-0">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">{therapy.name}</h3>
+                    <p className="text-gray-600">{therapy.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Benefits of Panchkarma
-          </h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Deep cleansing and detoxification of the body</li>
-            <li>Restoration of natural balance and harmony</li>
-            <li>Enhanced immunity and vitality</li>
-            <li>Improved mental clarity and emotional well-being</li>
-            <li>Prevention of diseases and promotion of longevity</li>
-          </ul>
+            {/* Consultation CTA */}
+            <div className="bg-emerald-700 text-white rounded-xl shadow-md p-8 text-center">
+              <h2 className="text-2xl font-bold mb-4">Ready to Start Your Treatment?</h2>
+              <p className="text-emerald-100 mb-6">
+                Book a consultation with our expert Ayurvedic practitioners to begin your journey to better health.
+              </p>
+              <Link
+                to="/consultation"
+                className="inline-flex items-center px-6 py-3 bg-white text-emerald-700 rounded-lg hover:bg-emerald-50 transition-colors font-medium"
+              >
+                Book Consultation
+              </Link>
+            </div>
+          </div>
         </div>
-
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Consultation and Treatment
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Panchkarma therapy should be administered under the supervision of qualified Ayurvedic practitioners. 
-            The treatment is customized based on individual constitution and health conditions.
-          </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Book a Consultation
-          </button>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

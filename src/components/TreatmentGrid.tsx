@@ -19,16 +19,17 @@ const TreatmentGrid: React.FC = () => {
   };
 
   const getTreatmentPath = (id: string) => {
-    switch (id) {
-      case 'kidney':
-        return '/treatments/kidney-disease';
-      case 'diabetes':
-        return '/treatments/diabetes';
-      case 'arthritis':
-        return '/treatments/arthritis';
-      default:
-        return `/treatments#${id}`;
-    }
+    const pathMap: { [key: string]: string } = {
+      'kidney': '/treatments/kidney-disease',
+      'diabetes': '/treatments/diabetes',
+      'arthritis': '/treatments/arthritis',
+      'hypertension': '/treatments/hypertension',
+      'asthma': '/treatments/asthma',
+      'liver': '/treatments/liver-disease',
+      'hiv': '/treatments/hiv',
+      'infertility': '/treatments/infertility'
+    };
+    return pathMap[id] || `/treatments/${id}`;
   };
 
   // Show only 3 treatments initially, or all if showAllTreatments is true
@@ -97,114 +98,19 @@ const TreatmentGrid: React.FC = () => {
             <motion.div 
               key={treatment.id}
               variants={getItemVariants(index)}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <motion.div 
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                      className="p-2 bg-emerald-50 rounded-lg"
-                    >
-                      {getIcon(treatment.icon)}
-                    </motion.div>
-                    <h3 className="text-xl font-semibold text-gray-800">{treatment.title}</h3>
+              <Link to={getTreatmentPath(treatment.id)} className="block p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    {getIcon(treatment.icon)}
                   </div>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => toggleTreatment(treatment.id)}
-                    className="p-2 text-gray-500 hover:text-emerald-700 transition-colors"
-                  >
-                    {expandedTreatment === treatment.id ? (
-                      <ChevronUp size={20} />
-                    ) : (
-                      <ChevronDown size={20} />
-                    )}
-                  </motion.button>
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{treatment.title}</h3>
+                    <p className="text-gray-600">{treatment.description}</p>
+                  </div>
                 </div>
-
-                <p className="text-gray-600 mb-4">{treatment.description}</p>
-
-                <AnimatePresence>
-                  {expandedTreatment === treatment.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="mt-4 space-y-4">
-                        <div className="prose prose-emerald max-w-none">
-                          <p className="text-gray-600">{treatment.detailedDescription}</p>
-                        </div>
-
-                        <div className="space-y-3">
-                          <h4 className="font-semibold text-gray-800">Common Symptoms:</h4>
-                          <ul className="space-y-2">
-                            {treatment.symptoms.map((symptom, index) => (
-                              <motion.li 
-                                key={index} 
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                className="flex items-start"
-                              >
-                                <CheckCircle2 className="w-5 h-5 text-emerald-600 mr-2 flex-shrink-0 mt-1" />
-                                <span className="text-gray-600">{symptom}</span>
-                              </motion.li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="space-y-3">
-                          <h4 className="font-semibold text-gray-800">Treatment Methods:</h4>
-                          <ul className="space-y-2">
-                            {treatment.methods.map((method, index) => (
-                              <motion.li 
-                                key={index} 
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                className="flex items-start"
-                              >
-                                <CheckCircle2 className="w-5 h-5 text-emerald-600 mr-2 flex-shrink-0 mt-1" />
-                                <span className="text-gray-600">{method}</span>
-                              </motion.li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-
-                <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Link 
-                      to={getTreatmentPath(treatment.id)}
-                      className="inline-flex items-center text-emerald-700 font-medium hover:text-emerald-800 transition-colors group"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Link 
-                      to="/consultation"
-                      className="inline-flex items-center px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors text-sm font-medium"
-                    >
-                      Book Consultation
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

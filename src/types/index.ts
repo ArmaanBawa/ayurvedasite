@@ -12,7 +12,10 @@ export interface MenuItem {
     detailedDescription: string;
     symptoms: string[];
     methods: string[];
-    expectedResults?: string;
+    causes: string[];
+    prevention: string[];
+    expectedResults: string;
+    ayurvedicPerspective: string;
   }
   
   export interface Testimonial {

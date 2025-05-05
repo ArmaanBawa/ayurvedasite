@@ -11,11 +11,18 @@ const TreatmentDetail: React.FC = () => {
 
   if (!treatment) {
     return (
-      <div className="py-24 text-center">
-        <h1 className="text-2xl font-bold text-gray-800">Treatment not found</h1>
-        <Link to="/treatments" className="text-emerald-600 hover:text-emerald-700 mt-4 inline-block">
-          Back to Treatments
-        </Link>
+      <div className="min-h-screen bg-emerald-50 py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">Treatment not found</h1>
+          <p className="text-gray-600 mb-8">The treatment you're looking for doesn't exist or has been moved.</p>
+          <Link 
+            to="/treatments" 
+            className="inline-flex items-center text-emerald-700 hover:text-emerald-800 font-medium"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Treatments
+          </Link>
+        </div>
       </div>
     );
   }
@@ -26,34 +33,34 @@ const TreatmentDetail: React.FC = () => {
   };
 
   return (
-    <div className="py-24 bg-emerald-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <Link 
-            to="/treatments"
-            className="inline-flex items-center text-emerald-700 hover:text-emerald-800 mb-8 group"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-            Back to Treatments
-          </Link>
+    <div className="min-h-screen bg-emerald-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 text-white py-20">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Link 
+              to="/treatments"
+              className="inline-flex items-center text-emerald-200 hover:text-white mb-8 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Treatments
+            </Link>
+            <div className="flex items-center gap-4 mb-6">
+              {getIcon(treatment.icon)}
+              <h1 className="text-4xl md:text-5xl font-bold">{treatment.title}</h1>
+            </div>
+            <p className="text-lg text-emerald-100 mb-8">
+              {treatment.description}
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-lg overflow-hidden"
-          >
-            <div className="p-8">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="p-4 bg-emerald-50 rounded-xl">
-                  {getIcon(treatment.icon)}
-                </div>
-                <div>
-                  <h1 className="text-3xl font-bold text-gray-800 mb-2">{treatment.title}</h1>
-                  <p className="text-lg text-gray-600">{treatment.description}</p>
-                </div>
-              </div>
-
+      {/* Treatment Details */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
@@ -68,6 +75,18 @@ const TreatmentDetail: React.FC = () => {
                         <li key={index} className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-emerald-600 mr-3 flex-shrink-0 mt-1" />
                           <span className="text-gray-600">{symptom}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Causes</h2>
+                    <ul className="space-y-3">
+                      {treatment.causes.map((cause, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle2 className="w-5 h-5 text-emerald-600 mr-3 flex-shrink-0 mt-1" />
+                          <span className="text-gray-600">{cause}</span>
                         </li>
                       ))}
                     </ul>
@@ -87,27 +106,47 @@ const TreatmentDetail: React.FC = () => {
                     </ul>
                   </div>
 
-                  {treatment.expectedResults && (
-                    <div>
-                      <h2 className="text-xl font-semibold text-gray-800 mb-4">Expected Results</h2>
-                      <p className="text-gray-600 leading-relaxed">{treatment.expectedResults}</p>
-                    </div>
-                  )}
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Prevention Tips</h2>
+                    <ul className="space-y-3">
+                      {treatment.prevention.map((tip, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle2 className="w-5 h-5 text-emerald-600 mr-3 flex-shrink-0 mt-1" />
+                          <span className="text-gray-600">{tip}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Expected Results</h2>
+                    <p className="text-gray-600 leading-relaxed">{treatment.expectedResults}</p>
+                  </div>
+
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Ayurvedic Perspective</h2>
+                    <p className="text-gray-600 leading-relaxed">{treatment.ayurvedicPerspective}</p>
+                  </div>
                 </div>
               </div>
-
-              <div className="mt-12 text-center">
-                <Link 
-                  to="/consultation"
-                  className="inline-flex items-center px-8 py-4 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors text-lg font-medium"
-                >
-                  Book a Consultation
-                </Link>
-              </div>
             </div>
-          </motion.div>
+
+            {/* Consultation CTA */}
+            <div className="bg-emerald-700 text-white rounded-xl shadow-md p-8 text-center">
+              <h2 className="text-2xl font-bold mb-4">Ready to Start Your Treatment?</h2>
+              <p className="text-emerald-100 mb-6">
+                Book a consultation with our expert Ayurvedic practitioners to begin your journey to better health.
+              </p>
+              <Link
+                to="/consultation"
+                className="inline-flex items-center px-6 py-3 bg-white text-emerald-700 rounded-lg hover:bg-emerald-50 transition-colors font-medium"
+              >
+                Book Consultation
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

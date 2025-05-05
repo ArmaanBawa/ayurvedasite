@@ -10,6 +10,11 @@ import Consultation from './pages/Consultation';
 import Contact from './pages/Contact';
 import Appointment from './pages/Appointment';
 import KidneyDisease from './pages/treatments/KidneyDisease';
+import Diabetes from './pages/treatments/Diabetes';
+import Arthritis from './pages/treatments/Arthritis';
+import Hypertension from './pages/treatments/Hypertension';
+import Asthma from './pages/treatments/Asthma';
+import TreatmentDetail from './pages/treatments/TreatmentDetail';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -29,6 +34,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/treatments/kidney-disease" element={<KidneyDisease />} />
+            <Route path="/treatments/diabetes" element={<Diabetes />} />
+            <Route path="/treatments/arthritis" element={<Arthritis />} />
+            <Route path="/treatments/hypertension" element={<Hypertension />} />
+            <Route path="/treatments/asthma" element={<Asthma />} />
+            <Route path="/treatments/:id" element={<TreatmentDetail />} />
           </Routes>
         </main>
         <Footer />
