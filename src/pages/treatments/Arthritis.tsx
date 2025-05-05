@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Phone, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 const Arthritis: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Arthritis: React.FC = () => {
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Arthritis Treatment</h1>
             <p className="text-lg text-emerald-100 mb-8">
-              Natural Ayurvedic solutions for managing arthritis pain and improving joint health
+              Natural Ayurvedic solutions for managing arthritis and improving joint health
             </p>
           </div>
         </div>
@@ -26,64 +26,53 @@ const Arthritis: React.FC = () => {
 
       {/* Treatment Details */}
       <section className="py-16">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Overview */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Understanding Arthritis</h2>
-                <p className="text-gray-600 mb-6">
-                  Arthritis is a condition characterized by joint inflammation and pain. Our Ayurvedic approach 
-                  focuses on reducing inflammation, improving joint mobility, and addressing the root cause of 
-                  the condition through natural methods and specialized therapies.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Understanding Arthritis</h2>
+              <p className="text-gray-600 mb-6">
+                Arthritis is a condition characterized by inflammation and stiffness in the joints. In Ayurveda, 
+                arthritis is known as "Amavata" and is primarily related to an imbalance in Vata dosha and the 
+                accumulation of Ama (toxins) in the joints.
+              </p>
             </div>
 
             {/* Treatment Process */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Treatment Process</h2>
-              <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Initial Assessment</h3>
-                    <p className="text-gray-600">
-                      We begin with a thorough evaluation of your condition, including joint examination, 
-                      pain assessment, and understanding your daily activities. This helps us develop a 
-                      personalized treatment plan that addresses your specific needs.
-                    </p>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-emerald-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Herbal Treatment</h3>
+                  <p className="text-gray-600">Natural herbs and formulations to reduce inflammation and improve joint health</p>
                 </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Customized Treatment Plan</h3>
-                    <p className="text-gray-600">
-                      Based on your assessment, we create a comprehensive treatment plan that may include 
-                      herbal supplements, Panchakarma therapies, specific exercises, and dietary 
-                      recommendations. Each aspect is designed to reduce inflammation and improve joint health.
-                    </p>
-                  </div>
+                <div className="bg-emerald-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Lifestyle Guidance</h3>
+                  <p className="text-gray-600">Comprehensive advice on diet, exercise, and daily routines</p>
                 </div>
+              </div>
+            </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Regular Monitoring</h3>
-                    <p className="text-gray-600">
-                      We closely monitor your progress through regular check-ups and adjust the treatment 
-                      plan as needed. This ensures that you receive the most effective care for your 
-                      condition.
-                    </p>
-                  </div>
+            {/* Treatment Methods */}
+            <div className="bg-white rounded-xl shadow-md p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Treatment Methods</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Herbal Treatments</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• Guggulu (Commiphora mukul) formulations</li>
+                    <li>• Ashwagandha (Withania somnifera) preparations</li>
+                    <li>• Shallaki (Boswellia serrata) combinations</li>
+                    <li>• Customized herbal combinations</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Panchakarma Therapies</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• Abhyanga - Full body massage</li>
+                    <li>• Swedana - Herbal steam therapy</li>
+                    <li>• Basti - Medicated enema therapy</li>
+                    <li>• Pizhichil - Oil pouring therapy</li>
+                  </ul>
                 </div>
               </div>
             </div>

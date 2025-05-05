@@ -7,14 +7,14 @@ export interface MenuItem {
   export interface Treatment {
     id: string;
     title: string;
-    icon: string;
     description: string;
-    detailedDescription: string;
+    icon: string;
     symptoms: string[];
-    methods: string[];
     causes: string[];
+    treatmentMethods: string[];
     prevention: string[];
     expectedResults: string;
+    timeline: string;
     ayurvedicPerspective: string;
   }
   

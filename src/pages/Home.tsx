@@ -7,6 +7,7 @@ import AyurvedaBenefits from '../components/AyurvedaBenefits';
 import AyurvedaGallery from '../components/AyurvedaGallery';
 import Chatbot from '../components/Chatbot';
 import ScrollAnimation from '../components/ScrollAnimation';
+import { treatments } from '../data/content';
 
 const Home: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation animation="scaleUp">
-        <TreatmentGrid />
+        <TreatmentGrid treatments={treatments} />
       </ScrollAnimation>
 
       <ScrollAnimation animation="slideIn">

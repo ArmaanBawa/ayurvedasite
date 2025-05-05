@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Phone, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 const Diabetes: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Diabetes: React.FC = () => {
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Diabetes Treatment</h1>
             <p className="text-lg text-emerald-100 mb-8">
-              Natural Ayurvedic solutions for managing diabetes and improving overall health
+              Natural Ayurvedic solutions for managing diabetes and improving metabolic health
             </p>
           </div>
         </div>
@@ -26,65 +26,53 @@ const Diabetes: React.FC = () => {
 
       {/* Treatment Details */}
       <section className="py-16">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Overview */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Understanding Diabetes</h2>
-                <p className="text-gray-600 mb-6">
-                  Diabetes is a chronic condition that affects how your body processes blood sugar (glucose). 
-                  Our Ayurvedic approach to diabetes treatment focuses on balancing the body's natural systems 
-                  and improving insulin sensitivity through natural methods. We believe in treating the root 
-                  cause of diabetes while managing symptoms effectively.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Understanding Diabetes</h2>
+              <p className="text-gray-600 mb-6">
+                Diabetes is a metabolic disorder characterized by high blood sugar levels. In Ayurveda, 
+                diabetes is known as "Madhumeha" and is primarily related to an imbalance in Kapha dosha 
+                and impaired Agni (digestive fire).
+              </p>
             </div>
 
             {/* Treatment Process */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Treatment Process</h2>
-              <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Comprehensive Assessment</h3>
-                    <p className="text-gray-600">
-                      We begin with a detailed evaluation of your condition, including blood sugar levels, 
-                      lifestyle factors, and overall health status. This helps us understand your unique 
-                      needs and develop a personalized treatment plan.
-                    </p>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-emerald-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Herbal Treatment</h3>
+                  <p className="text-gray-600">Natural herbs and formulations to regulate blood sugar levels</p>
                 </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Customized Treatment Plan</h3>
-                    <p className="text-gray-600">
-                      Based on your assessment, we create a tailored treatment plan that may include herbal 
-                      supplements, dietary recommendations, exercise routines, and stress management 
-                      techniques. Each aspect is designed to help manage diabetes naturally.
-                    </p>
-                  </div>
+                <div className="bg-emerald-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Lifestyle Guidance</h3>
+                  <p className="text-gray-600">Comprehensive advice on diet, exercise, and daily routines</p>
                 </div>
+              </div>
+            </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Regular Monitoring</h3>
-                    <p className="text-gray-600">
-                      We closely monitor your progress through regular check-ups and blood sugar tracking. 
-                      This helps us make necessary adjustments to your treatment plan and ensure optimal 
-                      results.
-                    </p>
-                  </div>
+            {/* Treatment Methods */}
+            <div className="bg-white rounded-xl shadow-md p-8 mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Treatment Methods</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Herbal Treatments</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• Gurmar (Gymnema sylvestre) formulations</li>
+                    <li>• Neem (Azadirachta indica) preparations</li>
+                    <li>• Jamun (Syzygium cumini) combinations</li>
+                    <li>• Customized herbal combinations</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Panchakarma Therapies</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li>• Virechana - Purgation therapy</li>
+                    <li>• Basti - Medicated enema therapy</li>
+                    <li>• Udvartana - Herbal powder massage</li>
+                    <li>• Abhyanga - Full body massage</li>
+                  </ul>
                 </div>
               </div>
             </div>
