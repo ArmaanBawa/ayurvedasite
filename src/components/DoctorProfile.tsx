@@ -93,7 +93,7 @@ const DoctorProfile: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Qualifications</p>
-                      <p className="font-semibold text-gray-800">{doctor.qualifications.length}+ Degrees</p>
+                      <p className="font-semibold text-gray-800">{doctor.qualifications && doctor.qualifications.length > 0 ? doctor.qualifications.length + " Degrees" : "No qualifications"}</p>
                     </div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const DoctorProfile: React.FC = () => {
                       Qualifications
                     </h4>
                     <ul className="grid grid-cols-2 gap-2">
-                      {doctor.qualifications.map((qual, index) => (
+                      {doctor.qualifications && doctor.qualifications.map((qual, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-600">
                           <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
                           {qual}

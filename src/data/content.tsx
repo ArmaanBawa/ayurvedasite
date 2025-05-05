@@ -186,8 +186,8 @@ export const doctorInfo = {
   name: 'Dr. Arjun Bawa',
   title: 'Chief Ayurvedic Physician',
   experience: '25+ years',
-  qualification: 'BAMS, MD (Ayurveda)',
-  specialty: 'Chronic Disease Management',
-  bio: 'Dr. Arjun Bawa is a renowned Ayurvedic physician with extensive experience in treating chronic conditions through authentic Ayurvedic methods. His unique approach combines traditional wisdom with modern diagnostic tools to deliver personalized treatment plans that address the root causes of diseases.',
+  qualifications: ['BAMS', 'MD (Ayurveda)'],
+  specialties: ['Chronic Disease Management', 'Panchakarma', 'Herbal Medicine'],
+  description: 'Dr. Arjun Bawa is a renowned Ayurvedic physician with extensive experience in treating chronic conditions through authentic Ayurvedic methods. His unique approach combines traditional wisdom with modern diagnostic tools to deliver personalized treatment plans that address the root causes of diseases.',
   image: 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600'
 };
