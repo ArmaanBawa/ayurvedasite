@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageSquare, X, Send, Phone, Mail, Calendar, Clock } from 'lucide-react';
+import { MessageSquare, X, Send, Phone, Mail, Clock } from 'lucide-react';
 
 const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

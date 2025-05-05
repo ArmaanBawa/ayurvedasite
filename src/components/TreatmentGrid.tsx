@@ -3,7 +3,7 @@ import { treatments } from '../data/content';
 import * as Icons from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const TreatmentGrid: React.FC = () => {
   const [expandedTreatment, setExpandedTreatment] = useState<string | null>(null);

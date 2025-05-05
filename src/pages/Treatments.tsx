@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { treatments } from '../data/content';
 import * as Icons from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Treatments: React.FC = () => {
   const getIcon = (iconName: string) => {
@@ -44,7 +44,6 @@ const Treatments: React.FC = () => {
           >
             <h1 className="text-5xl font-bold text-gray-800 mb-6">
               Our Ayurvedic Treatments
-              <Sparkles className="inline-block w-8 h-8 text-amber-500 ml-2" />
             </h1>
             <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -59,7 +58,7 @@ const Treatments: React.FC = () => {
             animate="visible"
             className="grid gap-8"
           >
-            {treatments.map((treatment, index) => (
+            {treatments.map((treatment) => (
               <motion.div
                 key={treatment.id}
                 variants={itemVariants}

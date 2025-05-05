@@ -66,7 +66,7 @@ const AllTreatments: React.FC = () => {
             animate="visible"
             className="grid gap-8"
           >
-            {treatments.map((treatment, index) => (
+            {treatments.map((treatment) => (
               <motion.div
                 key={treatment.id}
                 variants={itemVariants}

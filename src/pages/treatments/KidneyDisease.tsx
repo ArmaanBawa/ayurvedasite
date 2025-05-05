@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Phone, Clock, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Calendar, Phone, CheckCircle2 } from 'lucide-react';
 
 const KidneyDisease: React.FC = () => {
   return (
