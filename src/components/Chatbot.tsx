@@ -31,10 +31,10 @@ const Chatbot: React.FC = () => {
       return "We offer various Ayurvedic treatments including Panchakarma, Abhyanga, and Shirodhara. Would you like to know more about any specific treatment?";
     }
     if (message.includes('appointment') || message.includes('book') || message.includes('consultation')) {
-      return `We offer multiple ways to schedule a consultation:\n\n1. Online Consultation:\n   - Book through our website\n   - Video call appointments available\n\n2. Phone Consultation:\n   - Call us at +91 98765 43210\n   - Available Mon-Sat, 9 AM - 6 PM\n\n3. In-Person Visit:\n   - Address: 13-B, Lane No. 2/3, Kashmir Avenue, Batala Road, Amritsar\n   - Timings: Mon-Sat, 9 AM - 6 PM\n\nPlease provide your preferred contact method and I'll guide you through the process.`;
+      return `We offer multiple ways to schedule a consultation:\n\n1. Online Consultation:\n   - Book through our website\n   - Video call appointments available\n\n2. Phone Consultation:\n   - Call us at +91 83609 86081 or +91 78885 79180\n   - Available Mon-Sat, 9 AM - 6 PM\n\n3. In-Person Visit:\n   - Address: 13-B, Lane No. 2/3, Kashmir Avenue, Batala Road, Amritsar\n   - Timings: Mon-Sat, 9 AM - 6 PM\n\nPlease provide your preferred contact method and I'll guide you through the process.`;
     }
     if (message.includes('phone') || message.includes('call')) {
-      return "For phone consultations, please call us at +91-7888579180. Our team is available Monday to Saturday, 9 AM to 6 PM. We'll schedule your consultation based on your convenience.";
+      return "For phone consultations, please call us at +91 83609 86081 or +91 78885 79180. Our team is available Monday to Saturday, 9 AM to 6 PM. We'll schedule your consultation based on your convenience.";
     }
     if (message.includes('email') || message.includes('mail')) {
       return "For email consultations, please send your details to arjunbawa2222@gmail.com. Include your name, contact number, and preferred consultation time. Our team will respond within 24 hours.";

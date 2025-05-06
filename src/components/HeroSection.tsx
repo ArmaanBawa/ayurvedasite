@@ -20,6 +20,9 @@ const HeroSection: React.FC = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Discover the Power of <span className="text-amber-400">Ancient Ayurveda</span>
           </h1>
+          <p className="text-xl md:text-2xl text-amber-300 font-semibold mb-4">
+            No Hot Potency Medicine • No Bhasma • No Heavy Metals • Zero Side Effects
+          </p>
           <p className="text-lg md:text-xl text-emerald-100 mb-8">
             Experience authentic Ayurvedic treatments for chronic diseases. Our holistic approach combines 
             traditional wisdom with modern care to help you achieve optimal health and wellness.

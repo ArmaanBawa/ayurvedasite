@@ -142,13 +142,13 @@ const DoctorProfile: React.FC = () => {
                     <Calendar className="w-5 h-5 mr-2" />
                     Book Consultation
                   </Link>
-                  <a 
-                    href="tel:+918360986081"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call Now
-                  </a>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-5 h-5 text-primary" />
+                    <div>
+                      <span className="block">+91 83609 86081</span>
+                      <span className="block">+91 78885 79180</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

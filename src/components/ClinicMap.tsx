@@ -89,7 +89,10 @@ const ClinicMap: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-800 mb-1">Phone</h4>
-                  <p className="text-gray-600">+91 98765 43210</p>
+                  <p className="text-gray-600">
+                    +91 83609 86081<br />
+                    +91 78885 79180
+                  </p>
                 </div>
               </div>
 
