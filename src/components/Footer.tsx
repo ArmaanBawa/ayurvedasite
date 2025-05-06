@@ -63,36 +63,12 @@ const Footer: React.FC = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold text-emerald-200 mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-amber-500" />
-                <div className="text-emerald-100">
-                  <a href="tel:+918360986081" className="hover:text-amber-500 transition-colors block">
-                    +91 83609 86081
-                  </a>
-                  <a href="tel:+917888579180" className="hover:text-amber-500 transition-colors block">
-                    +91 78885 79180
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-amber-500" />
-                <a href="mailto:arjunbawa2222@gmail.com" className="text-emerald-100 hover:text-amber-500 transition-colors">
-                  arjunbawa2222@gmail.com
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 text-amber-500 mt-1" />
-                <span className="text-emerald-100">
-                  <strong className="text-emerald-200">Clinic 1:</strong><br />
-                  13-B, Lane No. 2/3, Kashmir Avenue,<br />
-                  Batala Road, Amritsar<br /><br />
-                  <strong className="text-emerald-200">Clinic 2:</strong><br />
-                  1109 Lane No. 8 (Left), RB Estate,<br />
-                  Loharka Road, Amritsar
-                </span>
-              </li>
-            </ul>
+            <div className="space-y-2">
+              <h4 className="font-semibold text-gray-800">Contact Us</h4>
+              <a href="tel:+918360986081" className="block text-emerald-600 hover:text-emerald-700">Call Now: +91 83609 86081</a>
+              <a href="tel:+917888579180" className="block text-emerald-600 hover:text-emerald-700">Call Now: +91 78885 79180</a>
+              <a href="mailto:arjunbawa2222@gmail.com" className="block text-emerald-600 hover:text-emerald-700">arjunbawa2222@gmail.com</a>
+            </div>
           </div>
 
           {/* Newsletter */}

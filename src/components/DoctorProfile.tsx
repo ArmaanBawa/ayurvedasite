@@ -134,6 +134,12 @@ const DoctorProfile: React.FC = () => {
                   {doctor.description}
                 </p>
 
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-gray-800">Contact Information</h4>
+                  <a href="tel:+918360986081" className="block text-emerald-600 hover:text-emerald-700">Call Now: +91 83609 86081</a>
+                  <a href="tel:+917888579180" className="block text-emerald-600 hover:text-emerald-700">Call Now: +91 78885 79180</a>
+                </div>
+
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link 
                     to="/about" 
@@ -153,13 +159,6 @@ const DoctorProfile: React.FC = () => {
                     </svg>
                     WhatsApp Us
                   </a>
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <div>
-                      <span className="block">+91 83609 86081</span>
-                      <span className="block">+91 78885 79180</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

@@ -83,17 +83,10 @@ const ClinicMap: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-emerald-50 rounded-lg">
-                  <Phone className="w-6 h-6 text-emerald-700" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-800 mb-1">Phone</h4>
-                  <p className="text-gray-600">
-                    +91 83609 86081<br />
-                    +91 78885 79180
-                  </p>
-                </div>
+              <div className="text-gray-600">
+                <h3 className="font-semibold text-gray-800 mb-2">Contact Information</h3>
+                <a href="tel:+918360986081" className="block text-emerald-600 hover:text-emerald-700">Call Now: +91 83609 86081</a>
+                <a href="tel:+917888579180" className="block text-emerald-600 hover:text-emerald-700">Call Now: +91 78885 79180</a>
               </div>
 
               <div className="flex items-start gap-4">
