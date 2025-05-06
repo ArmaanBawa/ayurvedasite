@@ -41,4 +41,5 @@ export interface MenuItem {
     qualifications: string[];
     specialties: string[];
     image: string;
+    aboutImage: string;
   }
