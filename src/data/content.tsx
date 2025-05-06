@@ -232,16 +232,17 @@ export const testimonials: Testimonial[] = [
 export const socialLinks: SocialLink[] = [
   { id: 'facebook', platform: 'Facebook', url: 'https://facebook.com', icon: 'facebook' },
   { id: 'twitter', platform: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
-  { id: 'instagram', platform: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
+  { id: 'instagram', platform: 'Instagram', url: 'https://www.instagram.com/bawa_s_modernayurveda_', icon: 'instagram' },
   { id: 'youtube', platform: 'YouTube', url: 'https://youtube.com', icon: 'youtube' }
 ];
 
 export const doctorInfo = {
   name: 'Dr. Arjun Bawa',
   title: 'Chief Ayurvedic Physician',
-  experience: '25+ years',
-  qualifications: ['BAMS', 'MD (Ayurveda)'],
+  experience: '12+ years',
+  qualifications: ['BAMS', 'MSc. Psychology', 'NIMA'],
   specialties: ['Chronic Disease Management', 'Panchakarma', 'Herbal Medicine'],
   description: 'Dr. Arjun Bawa is a renowned Ayurvedic physician with extensive experience in treating chronic conditions through authentic Ayurvedic methods. His unique approach combines traditional wisdom with modern diagnostic tools to deliver personalized treatment plans that address the root causes of diseases.',
-  image: 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600'
+  image: '/src/IMG_2558.jpg',
+  aboutImage: '/src/IMG_2573.jpg'
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Mail, Phone, MessageSquare } from 'lucide-react';
+import { User, Mail, Phone, MessageSquare, Instagram } from 'lucide-react';
 import { sendContactForm } from '../utils/formUtils';
 import ClinicMap from '../components/ClinicMap';
 import { motion } from 'framer-motion';
@@ -166,7 +166,7 @@ const Contact: React.FC = () => {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
-            <div className="mt-8 text-center">
+            <div className="mt-8 text-center space-y-4">
               <a
                 href="https://g.co/kgs/xYJCxkD"
                 target="_blank"
@@ -175,6 +175,17 @@ const Contact: React.FC = () => {
               >
                 View Us on Google
               </a>
+              <div>
+                <a
+                  href="https://www.instagram.com/bawa_s_modernayurveda_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span>Follow us on Instagram</span>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

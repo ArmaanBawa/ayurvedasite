@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, Phone, Mail, MapPin } from 'lucide-react';
+import { Leaf, Phone, Mail, MapPin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -20,6 +20,15 @@ const Footer: React.FC = () => {
               Experience the ancient wisdom of Ayurveda with modern care. We provide authentic 
               treatments for chronic diseases and holistic wellness.
             </p>
+            <a
+              href="https://www.instagram.com/bawa_s_modernayurveda_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-emerald-100 hover:text-amber-500 transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
+              <span>Follow us on Instagram</span>
+            </a>
           </div>
 
           {/* Quick Links */}
