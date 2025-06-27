@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import HeroSection from '../components/HeroSection';
 import TreatmentGrid from '../components/TreatmentGrid';
 import DoctorProfile from '../components/DoctorProfile';
@@ -11,31 +12,38 @@ import { treatments } from '../data/content';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <HeroSection />
-      
-      <ScrollAnimation animation="fadeUp">
-        <AyurvedaBenefits />
-      </ScrollAnimation>
+    <>
+      <Helmet>
+        <head></head>
+        <title>Home | Ayuva Ayurveda</title>
+        <meta name="description" content="Discover authentic Ayurvedic treatments for chronic diseases and holistic wellness." />
+      </Helmet>
+      <div>
+        <HeroSection />
+        
+        <ScrollAnimation animation="fadeUp">
+          <AyurvedaBenefits />
+        </ScrollAnimation>
 
-      <ScrollAnimation animation="scaleUp">
-        <TreatmentGrid treatments={treatments} />
-      </ScrollAnimation>
+        <ScrollAnimation animation="scaleUp">
+          <TreatmentGrid treatments={treatments} />
+        </ScrollAnimation>
 
-      <ScrollAnimation animation="slideIn">
-        <AyurvedaGallery />
-      </ScrollAnimation>
+        <ScrollAnimation animation="slideIn">
+          <AyurvedaGallery />
+        </ScrollAnimation>
 
-      <ScrollAnimation animation="fadeUp">
-        <DoctorProfile />
-      </ScrollAnimation>
+        <ScrollAnimation animation="fadeUp">
+          <DoctorProfile />
+        </ScrollAnimation>
 
-      <ScrollAnimation animation="fadeIn">
-        <TestimonialCarousel />
-      </ScrollAnimation>
+        <ScrollAnimation animation="fadeIn">
+          <TestimonialCarousel />
+        </ScrollAnimation>
 
-      <Chatbot />
-    </div>
+        <Chatbot />
+      </div>
+    </>
   );
 };
 
