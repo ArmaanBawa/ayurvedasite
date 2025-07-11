@@ -31,7 +31,17 @@ const OnlineConsultation: React.FC = () => {
   return (
     <>
       <Helmet>
-        <head></head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1PDFD47P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L1PDFD47P8');
+            `,
+          }}
+        />
         <title>Online Consultation | Ayuva Ayurveda</title>
         <meta name="description" content="Book an online consultation with Ayuva Ayurveda's expert physicians from the comfort of your home." />
       </Helmet>

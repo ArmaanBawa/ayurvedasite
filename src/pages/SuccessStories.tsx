@@ -39,6 +39,17 @@ const SuccessStories: React.FC = () => {
   return (
     <>
       <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1PDFD47P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L1PDFD47P8');
+            `,
+          }}
+        />
         <title>Success Stories | Ayuva Ayurveda</title>
         <meta name="description" content="Read real success stories and testimonials from patients who have benefited from Ayuva Ayurveda treatments." />
       </Helmet>

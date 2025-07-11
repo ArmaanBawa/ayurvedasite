@@ -36,9 +36,20 @@ const AllTreatments: React.FC = () => {
   return (
     <>
       <Helmet>
-        <head></head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1PDFD47P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L1PDFD47P8');
+            `,
+          }}
+        />
         <title>All Treatments | Ayuva Ayurveda</title>
         <meta name="description" content="Browse all available Ayurvedic treatments at Ayuva Ayurveda for a variety of health concerns." />
+        <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 py-24">

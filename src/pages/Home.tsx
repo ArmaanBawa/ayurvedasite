@@ -14,9 +14,20 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <head></head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1PDFD47P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L1PDFD47P8');
+            `,
+          }}
+        />
         <title>Home | Ayuva Ayurveda</title>
-        <meta name="description" content="Discover authentic Ayurvedic treatments for chronic diseases and holistic wellness." />
+        <meta name="Best Ayurvedic Doctor in Amritsar - Ayuvacare" content="Looking for the best Ayurvedic doctor in Amritsar? Ayuvacare offers expert treatment for liver, diabetes, cancer, stomach & piles at top clinics near you." />
+        <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div>
         <HeroSection />

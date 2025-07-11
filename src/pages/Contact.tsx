@@ -60,9 +60,20 @@ const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <head></head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1PDFD47P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L1PDFD47P8');
+            `,
+          }}
+        />
         <title>Contact | Ayuva Ayurveda</title>
-        <meta name="description" content="Contact Ayuva Ayurveda for questions, appointments, or more information about our treatments." />
+        <meta name="Contact US - Ayuvacare" content="Connect with Ayuvacare for expert Ayurvedic care. Contact arjunbawa2222@gmail.com or call 8360986081 for personalized treatment and consultation." />
+        <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 py-24">

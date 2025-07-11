@@ -6,9 +6,20 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <head></head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1PDFD47P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L1PDFD47P8');
+            `,
+          }}
+        />
         <title>About | Ayuva Ayurveda</title>
         <meta name="description" content="Learn about Ayuva Ayurveda, our mission, expertise, and our experienced Ayurvedic physician." />
+        <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="py-24 bg-emerald-50">
         <div className="container mx-auto px-4">
