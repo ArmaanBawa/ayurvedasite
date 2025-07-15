@@ -48,7 +48,7 @@ const AllTreatments: React.FC = () => {
           }}
         />
         <title>All Treatments | Ayuva Ayurveda</title>
-        <meta name="description" content="Browse all available Ayurvedic treatments at Ayuva Ayurveda for a variety of health concerns." />
+        <meta name="Treatments - Ayuvacare" content="Ayuvacare offers trusted Ayurvedic treatments for liver, diabetes, cancer, piles, and more. Discover natural healing with personalized care today." />
         <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">

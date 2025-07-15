@@ -17,10 +17,12 @@ import Hypertension from './pages/treatments/Hypertension';
 import Asthma from './pages/treatments/Asthma';
 import TreatmentDetail from './pages/treatments/TreatmentDetail';
 import ScrollToTop from './components/ScrollToTop';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -45,7 +47,7 @@ function App() {
         <Footer />
       </div>
       <Analytics />
-    </>
+    </HelmetProvider>
   );
 }
 

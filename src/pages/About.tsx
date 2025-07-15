@@ -18,7 +18,7 @@ const About: React.FC = () => {
           }}
         />
         <title>About | Ayuva Ayurveda</title>
-        <meta name="description" content="Learn about Ayuva Ayurveda, our mission, expertise, and our experienced Ayurvedic physician." />
+        <meta name="About US - Ayuvacare" content="Learn about us at Ayuvacare is your trusted destination for holistic Ayurvedic treatments, expert doctors, and personalized healing in Amritsar. Visit us! " />
         <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="py-24 bg-emerald-50">

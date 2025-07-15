@@ -8,6 +8,7 @@ const Appointment: React.FC = () => {
     <>
       <Helmet>
         <title>Appointment | Ayuva Ayurveda</title>
+        <head></head>
         <meta name="description" content="Book your appointment with Ayuva Ayurveda's expert physicians and start your healing journey today." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">

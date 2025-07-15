@@ -43,7 +43,8 @@ const OnlineConsultation: React.FC = () => {
           }}
         />
         <title>Online Consultation | Ayuva Ayurveda</title>
-        <meta name="description" content="Book an online consultation with Ayuva Ayurveda's expert physicians from the comfort of your home." />
+        <meta name="Book a Consultation - Ayuvacare" content="Book a consultation with Ayuvacare's expert Ayurvedic doctors for personalized treatment of liver, diabetes, piles, and more. Visit us!" />
+        <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="py-24 bg-emerald-50">
         <div className="container mx-auto px-4">

@@ -51,7 +51,8 @@ const SuccessStories: React.FC = () => {
           }}
         />
         <title>Success Stories | Ayuva Ayurveda</title>
-        <meta name="description" content="Read real success stories and testimonials from patients who have benefited from Ayuva Ayurveda treatments." />
+        <meta name="Success Stories - Ayuvacare" content="Explore Ayuvacare’s success stories and see how our expert Ayurvedic treatments have transformed lives with lasting relief from chronic health issues." />
+        <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
       </Helmet>
       <div className="py-24 bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4">
