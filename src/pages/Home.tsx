@@ -28,6 +28,7 @@ const Home: React.FC = () => {
         <title>Home | Ayuva Ayurveda</title>
         <meta name="Best Ayurvedic Doctor in Amritsar - Ayuvacare" content="Looking for the best Ayurvedic doctor in Amritsar? Ayuvacare offers expert treatment for liver, diabetes, cancer, stomach & piles at top clinics near you." />
         <meta name="google-site-verification" content="untvmc1r_mvBJOak0BUvYRW47JZ4Grx7gvC_J9R_EXM" />
+        <meta name="google-site-verification" content="1lueMpVY4cjRmhevJ6Py6iANZYXQl2S7kfVxv2pm2yI" />
       </Helmet>
       <div>
         <HeroSection />
